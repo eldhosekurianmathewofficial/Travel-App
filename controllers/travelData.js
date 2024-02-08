@@ -10,4 +10,8 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
 })
+router.get("/view",async(req,res)=>{
+    let output=await travelmodel.find()
+    res.json(output)
+})
 module.exports =router
