@@ -14,4 +14,10 @@ router.get("/view",async(req,res)=>{
     let output=await travelmodel.find()
     res.json(output)
 })
+
+router.post("/search",async(req,res)=>{
+    let data = req.body
+    let output = await travelmodel.find(data)
+    res.json(output)
+})
 module.exports =router
